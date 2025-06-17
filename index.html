@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta tags: Character encoding and responsive design -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Synedra - AI Smart Products</title>
+
+  <!-- Embedded CSS for styling the webpage -->
   <style>
+    /* Base body styling */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
       color: #333;
     }
+
+    /* Header section: dark background with navigation */
     header {
       background: #111;
       color: white;
@@ -19,22 +25,30 @@
       justify-content: space-between;
       align-items: center;
     }
+
+    /* Navigation links inside header */
     nav a {
       margin-left: 1rem;
       color: white;
       text-decoration: none;
     }
+
+    /* Hero banner section styling */
     .hero {
       background: #222;
       color: white;
       padding: 3rem 2rem;
       text-align: center;
     }
+
+    /* Products container section */
     .products {
       padding: 2rem;
       max-width: 1100px;
       margin: auto;
     }
+
+    /* Each individual product box */
     .product {
       background: white;
       border-radius: 10px;
@@ -42,11 +56,15 @@
       margin-bottom: 2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
+    /* Horizontal scrollable image gallery */
     .gallery {
       display: flex;
       gap: 1rem;
       overflow-x: auto;
     }
+
+    /* Small gallery images */
     .gallery img {
       width: 150px;
       max-height: 100px;
@@ -54,6 +72,8 @@
       border-radius: 5px;
       object-fit: cover;
     }
+
+    /* Main zoomed image preview */
     .zoomed {
       width: 100%;
       max-width: 600px;
@@ -62,19 +82,27 @@
       display: block;
       border-radius: 10px;
     }
+
+    /* YouTube iframe video styling */
     iframe {
       width: 100%;
       height: 300px;
       margin-top: 1rem;
     }
+
+    /* Product specification text */
     .specs {
       margin-top: 1rem;
     }
+
+    /* Price styling */
     .price {
       font-weight: bold;
       color: #333;
       margin: 1rem 0;
     }
+
+    /* Buy Now button styling */
     .buy-btn {
       background: #ff6600;
       color: white;
@@ -84,6 +112,37 @@
       cursor: pointer;
       text-decoration: none;
     }
+
+    /* Contact form box */
+    .contact-form {
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+
+    /* Input fields and textarea styling */
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /* Send button for the contact form */
+    .contact-form button {
+      background: #111;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Footer styling */
     footer {
       background: #111;
       color: white;
@@ -92,6 +151,8 @@
       margin-top: 3rem;
     }
   </style>
+
+  <!-- JavaScript for image zoom functionality -->
   <script>
     function zoomImage(src, targetId) {
       document.getElementById(targetId).src = src;
@@ -100,6 +161,7 @@
 </head>
 <body>
 
+<!-- Header section with logo and navigation links -->
 <header>
   <h1><img src="logo.jpg" alt="Logo" height="40"> Synedra</h1>
   <nav>
@@ -109,11 +171,13 @@
   </nav>
 </header>
 
+<!-- Hero section to introduce brand -->
 <section class="hero">
   <h2>Smart AI Devices for the Future</h2>
   <p>Explore our exclusive smart gadgets powered by AI innovation.</p>
 </section>
 
+<!-- Product showcase section -->
 <section id="products" class="products">
   <h2 style="text-align:center;">Our Products</h2>
 
@@ -134,7 +198,7 @@
       <p><strong>Specification:</strong> Capturing picture, Video recording, Music, Chat-GPT, Voice recording, Voice-activated, Bluetooth 5.0, UV400 lens, 5-hour battery life.</p>
     </div>
     <div class="price">৳7,500</div>
-    <a class="buy-btn" href="#">Buy Now</a>
+    <a class="buy-btn" href="#contact">Buy Now</a>
   </div>
 
   <!-- Product 2 -->
@@ -154,21 +218,41 @@
       <p><strong>Specification:</strong> Real-time multilingual translation, 2.4" touch display, Wi-Fi + Offline mode, 40+ languages supported.</p>
     </div>
     <div class="price">৳9,000</div>
-    <a class="buy-btn" href="#">Buy Now</a>
+    <a class="buy-btn" href="#contact">Buy Now</a>
   </div>
 </section>
 
+<!-- About section -->
 <section id="about" class="products">
   <h2>About Synedra</h2>
   <p>We are passionate about delivering innovative AI technology that transforms everyday life. From smart sunglasses to intelligent speech devices, Synedra is committed to a smarter future.</p>
 </section>
 
+<!-- Contact and message form section -->
 <section id="contact" class="products">
   <h2>Contact Us</h2>
   <p>Email: synedrabd@gmail.com</p>
   <p>Phone: +8801835332324</p>
+
+  <!-- Static payment method section -->
+  <div class="contact-form">
+    <h3>Payment Methods</h3>
+    <p><strong>Bkash:</strong> 018XXXXXXXX</p>
+    <p><strong>Nagad:</strong> 017XXXXXXXX</p>
+    <p><strong>Bank:</strong> Synedra Tech Ltd. - A/C: 1234567890123 (Dutch Bangla Bank)</p>
+  </div>
+
+  <!-- Customer message form -->
+  <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+    <h3>Send Us a Message</h3>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </section>
 
+<!-- Footer -->
 <footer>
   <p>&copy; 2025 Synedra. All rights reserved.</p>
 </footer>
